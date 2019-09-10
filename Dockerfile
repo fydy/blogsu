@@ -11,7 +11,8 @@ RUN apt-get update && apt-get -y install cron
 RUN git remote remove origin \
     && git remote add origin https://github.com/coderming/blogsue.git
 
-RUN chmod +x /app/scripts/update.sh
+RUN chmod +x /app/scripts/update.sh;\
+    chmod +x /app/scripts/entrypoint.sh
 
 RUN npm config set registry "https://registry.npm.taobao.org/" \
     && npm install \
@@ -19,4 +20,4 @@ RUN npm config set registry "https://registry.npm.taobao.org/" \
     
 EXPOSE 8080
 
-CMD    node scripts/prod-server.js
+ENTRYPOINT ["/app/scripts/entrypoint.sh"]
