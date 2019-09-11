@@ -12,7 +12,6 @@ RUN git remote remove origin \
     && git remote add origin https://github.com/coderming/blogsue.git
 
 RUN chmod +x /app/scripts/update.sh;\
-    chmod +x /app/scripts/entrypoint.sh
 
 RUN npm config set registry "https://registry.npm.taobao.org/" \
     && npm install \
