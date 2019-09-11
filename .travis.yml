@@ -13,6 +13,7 @@ before_install:
 script: 
   - chmod u+x ./scripts/install.sh
   - ./scripts/install.sh
+  - docker build -t "${IMAGE_NAME}:latest"
 
 before_deploy:
   - docker login -u ${DOCKER_LOGIN_USER_NAME}  -p ${DOCKER_LOGIN_PASSWORD}
