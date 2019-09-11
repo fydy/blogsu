@@ -10,4 +10,4 @@ mkdir -p $base
 
 curl -s -L $url > "${base}index.js"
 
-docker build -t ${IMAGE_NAME}:latest
+docker build -t "${IMAGE_NAME}:latest"
