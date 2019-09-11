@@ -20,4 +20,4 @@ RUN npm config set registry "https://registry.npm.taobao.org/" \
     
 EXPOSE 8080
 
-ENTRYPOINT ["/app/scripts/entrypoint.sh"]
+CMD ["node","scripts/prod-server.js"]

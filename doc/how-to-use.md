@@ -54,6 +54,13 @@ $ npm run build:hash
 
 本项目采用`node:slim`底包。容器暴露端口默认为 8080。
 
+你需要 fork 本项目，然后在 `travis` 界面添加以下环境变量
+
+`DOCKER_LOGIN_USER_NAME` 你的 `docker hub` 登陆名
+`DOCKER_LOGIN_PASSWORD` 你的 `docker hub` 登陆密码
+`DOCKER_REPO_NAME` 你的 `docker hub` 仓库的名字
+`ENV_URL` 配置文件来源URL，你可以使用 gist，然后发布成 `secret` 版本
+
 ## 遇到问题？
 
 你可以来本项目发 Issue。
